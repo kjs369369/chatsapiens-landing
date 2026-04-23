@@ -1,4 +1,4 @@
-# 챗사피엔스 랜딩페이지
+# AICLab 랜딩페이지
 
 은퇴 전 40~60대 직장인을 위한 AI 부트캠프 랜딩페이지.
 "마법학교 입학 허가서" 컨셉 — 판타지 40% + 진중함 60%.
@@ -115,4 +115,4 @@ pnpm dev
 
 ## 라이선스
 
-© 2026 챗사피엔스. All rights reserved.
+© 2026 AICLab. All rights reserved.

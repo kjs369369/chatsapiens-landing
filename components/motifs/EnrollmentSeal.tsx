@@ -12,8 +12,8 @@ export type EnrollmentSealProps = {
  * 히어로 섹션의 '입학 허가' 도장 역할.
  */
 export function EnrollmentSeal({
-  monogram = "챗",
-  label = "CHATSAPIENS · ENROLLMENT",
+  monogram = "AI",
+  label = "AICLAB · ENROLLMENT",
   className,
   size = 160,
 }: EnrollmentSealProps) {
@@ -22,7 +22,7 @@ export function EnrollmentSeal({
   return (
     <svg
       role="img"
-      aria-label="챗사피엔스 입학 허가 씰"
+      aria-label="AICLab 입학 허가 씰"
       viewBox="0 0 200 200"
       width={size}
       height={size}

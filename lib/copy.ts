@@ -1,11 +1,11 @@
 /**
- * 챗사피엔스 랜딩페이지 카피 원본 (Single Source of Truth)
+ * AICLab 랜딩페이지 카피 원본 (Single Source of Truth)
  * 모든 텍스트는 이 파일에서만 변경합니다.
  */
 
 export const copy = {
   brand: {
-    name: "챗사피엔스",
+    name: "AICLab",
     tagline: "은퇴 전, 다시 시작하는 AI 실행 학교",
   },
 
@@ -15,14 +15,14 @@ export const copy = {
 
   // 섹션 1. 히어로
   hero: {
-    eyebrow: "챗사피엔스 입학 허가서",
+    eyebrow: "AICLab 입학 허가서",
     headline: "은퇴 전에 준비하는 AI 실행력",
     subheadline:
       "40~60대 비전공자도 어렵지 않게 시작해, 배우는 데서 끝나지 않고 실제 결과물과 제2직업 가능성까지 연결하는 실전형 AI 부트캠프",
     primaryCta: "무료 설명회 신청하기",
     secondaryCta: "커리큘럼 살펴보기",
-    sealMonogram: "챗",
-    sealLabel: "CHATSAPIENS",
+    sealMonogram: "AI",
+    sealLabel: "AICLAB",
   },
 
   // 섹션 2. 문제 공감
@@ -45,15 +45,15 @@ export const copy = {
   solution: {
     eyebrow: "해결의 방향",
     headline:
-      "챗사피엔스는 AI를 ‘알게 하는 강의’가 아니라 직접 해보며 결과물을 남기게 하는 실행형 교육입니다",
-    body: "대부분의 AI 강의는 기능을 설명하고 끝납니다. 하지만 은퇴를 앞둔 직장인에게 필요한 것은 더 많은 정보가 아니라 지금부터 내 경쟁력으로 연결되는 실행 경험입니다. 챗사피엔스는 40~60대 비전공자도 따라올 수 있도록 설계해, AI를 어렵게 배우는 것이 아니라 직접 써보고, 만들어보고, 남기는 경험으로 바꿉니다.",
+      "AICLab는 AI를 ‘알게 하는 강의’가 아니라 직접 해보며 결과물을 남기게 하는 실행형 교육입니다",
+    body: "대부분의 AI 강의는 기능을 설명하고 끝납니다. 하지만 은퇴를 앞둔 직장인에게 필요한 것은 더 많은 정보가 아니라 지금부터 내 경쟁력으로 연결되는 실행 경험입니다. AICLab는 40~60대 비전공자도 따라올 수 있도록 설계해, AI를 어렵게 배우는 것이 아니라 직접 써보고, 만들어보고, 남기는 경험으로 바꿉니다.",
     badge: "실행",
   },
 
   // 섹션 4. 핵심 가치 (4개 카드)
   coreValues: {
     eyebrow: "핵심 가치",
-    title: "왜 챗사피엔스여야 할까요?",
+    title: "왜 AICLab여야 할까요?",
     cards: [
       {
         number: "I",
@@ -63,7 +63,7 @@ export const copy = {
       {
         number: "II",
         title: "배우는 데서 끝나지 않게 합니다",
-        body: "유튜브를 보고 아는 것 같아도, 내 것이 되지 않으면 의미가 없습니다. 챗사피엔스는 실제 과제, 실습, 피드백을 통해 결과물이 남는 학습을 만듭니다.",
+        body: "유튜브를 보고 아는 것 같아도, 내 것이 되지 않으면 의미가 없습니다. AICLab는 실제 과제, 실습, 피드백을 통해 결과물이 남는 학습을 만듭니다.",
       },
       {
         number: "III",
@@ -81,7 +81,7 @@ export const copy = {
   // 섹션 5. 차별화 (비교)
   differentiation: {
     eyebrow: "차별화",
-    title: "무료 정보와 챗사피엔스의 차이는 분명합니다",
+    title: "무료 정보와 AICLab의 차이는 분명합니다",
     columns: [
       {
         heading: "무료 정보의 한계",
@@ -102,7 +102,7 @@ export const copy = {
         ],
       },
       {
-        heading: "챗사피엔스의 차별점",
+        heading: "AICLab의 차별점",
         tone: "highlight" as const,
         items: [
           "정보 제공이 아니라 실행 구조를 제공합니다",
@@ -206,7 +206,7 @@ export const copy = {
     eyebrow: "브랜드 철학",
     title:
       "당신의 경험은 사라지지 않습니다. AI는 그것을 다시 연결해주는 도구입니다",
-    body: "은퇴를 앞두면 많은 분들이 ‘이제 나는 무엇을 할 수 있을까’를 고민합니다. 챗사피엔스는 그 질문에 답하고 싶습니다. 당신은 늦은 것이 아닙니다. 이미 쌓아온 경험이 있고, 이제 거기에 AI라는 새로운 도구를 더할 수 있습니다. 중요한 것은 젊은 사람들처럼 빠르게 따라가는 것이 아닙니다. 내 경험을 바탕으로, 지금부터 다시 연결되는 것입니다.",
+    body: "은퇴를 앞두면 많은 분들이 ‘이제 나는 무엇을 할 수 있을까’를 고민합니다. AICLab는 그 질문에 답하고 싶습니다. 당신은 늦은 것이 아닙니다. 이미 쌓아온 경험이 있고, 이제 거기에 AI라는 새로운 도구를 더할 수 있습니다. 중요한 것은 젊은 사람들처럼 빠르게 따라가는 것이 아닙니다. 내 경험을 바탕으로, 지금부터 다시 연결되는 것입니다.",
   },
 
   // 섹션 11. 최종 CTA
@@ -227,13 +227,13 @@ export const copy = {
 
   // 섹션 12. Footer
   footer: {
-    brandName: "챗사피엔스",
+    brandName: "AICLab",
     description: "은퇴 전, 다시 시작하는 AI 실행 학교",
     email: "hello@chatsapiens.kr",
     address: "(준비중)",
     privacy: "개인정보처리방침",
     terms: "이용약관",
-    copyright: "© 2026 챗사피엔스. All rights reserved.",
+    copyright: "© 2026 AICLab. All rights reserved.",
   },
 } as const;
 
