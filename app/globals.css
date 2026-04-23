@@ -1,0 +1,313 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+ * 챗사피엔스 디자인 토큰 (Tailwind v4 @theme)
+ * ========================================================================== */
+@theme {
+  /* Colors — Burgundy (Primary) */
+  --color-burgundy-50: #fbeaea;
+  --color-burgundy-100: #f2c9c9;
+  --color-burgundy-600: #950001;
+  --color-burgundy-700: #7e0101;
+  --color-burgundy-800: #740001;
+  --color-burgundy-900: #4a0001;
+
+  /* Colors — Gold (Secondary) */
+  --color-gold-50: #fdf7e3;
+  --color-gold-100: #f4e7ab;
+  --color-gold-300: #e8c547;
+  --color-gold-500: #d3a625;
+  --color-gold-700: #a07818;
+  --color-gold-900: #5f4710;
+
+  /* Colors — Supporting */
+  --color-forest-700: #1a472a;
+  --color-forest-500: #2d6a44;
+  --color-navy-700: #222f5b;
+  --color-navy-500: #3b4a7e;
+
+  /* Colors — Parchment / Ink */
+  --color-parchment: #f4ede0;
+  --color-parchment-dark: #e8ddd0;
+  --color-parchment-deep: #d8c9b0;
+  --color-ink: #1c1008;
+  --color-ink-soft: #3a2a1c;
+  --color-ink-muted: #6b5a48;
+
+  /* Fonts */
+  --font-display: var(--font-cinzel), "Times New Roman", "Noto Serif KR", serif;
+  --font-body: var(--font-noto-serif-kr), "Georgia", "Times New Roman", serif;
+  --font-sans: var(--font-noto-serif-kr), "Georgia", "Times New Roman", serif;
+
+  /* Radii */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+
+  /* Shadows */
+  --shadow-wax: 0 6px 12px -4px rgba(116, 0, 1, 0.35), 0 0 0 2px rgba(211, 166, 37, 0.6);
+  --shadow-parchment: 0 8px 24px -12px rgba(28, 16, 8, 0.25), 0 2px 4px -2px rgba(28, 16, 8, 0.1);
+  --shadow-elevated: 0 16px 40px -16px rgba(28, 16, 8, 0.35);
+
+  /* Typography — Base font-size 18px for 40~60대 가독성 */
+  --text-xs: 0.8125rem; /* 13px */
+  --text-sm: 0.9375rem; /* 15px */
+  --text-base: 1.125rem; /* 18px */
+  --text-lg: 1.25rem; /* 20px */
+  --text-xl: 1.4375rem; /* 23px */
+  --text-2xl: 1.75rem; /* 28px */
+  --text-3xl: 2.125rem; /* 34px */
+  --text-4xl: 2.5rem; /* 40px */
+  --text-5xl: 3.25rem; /* 52px */
+  --text-6xl: 4rem; /* 64px */
+
+  /* Animations (Tailwind v4 exposes as utility) */
+  --animate-accordion-down: accordion-down 0.28s cubic-bezier(0.2, 0.8, 0.3, 1);
+  --animate-accordion-up: accordion-up 0.24s cubic-bezier(0.2, 0.8, 0.3, 1);
+  --animate-gold-sweep: gold-sweep 0.8s cubic-bezier(0.2, 0.8, 0.3, 1) both;
+}
+
+/* ==========================================================================
+ * Base Styles
+ * ========================================================================== */
+:root {
+  color-scheme: light only;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+  font-size: 100%;
+}
+
+body {
+  background-color: var(--color-parchment);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.7;
+  word-break: keep-all;
+  word-wrap: break-word;
+  overflow-x: hidden;
+}
+
+/*
+ * Heading defaults — declared inside the `base` layer so that Tailwind
+ * utility classes (e.g. text-[var(--color-parchment)]) can override the
+ * heading color when rendered on dark backgrounds. Without the @layer wrapper
+ * these unlayered rules would win over utilities regardless of specificity,
+ * which previously made section headlines on burgundy/navy backgrounds
+ * render in near-black ink and fail WCAG AA contrast.
+ */
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    color: var(--color-ink);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    word-break: keep-all;
+  }
+}
+
+/* ==========================================================================
+ * Focus Styles
+ * ========================================================================== */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold-500);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+::selection {
+  background-color: var(--color-gold-300);
+  color: var(--color-ink);
+}
+
+/* ==========================================================================
+ * Textures
+ * ========================================================================== */
+.bg-parchment-texture {
+  background-color: var(--color-parchment);
+  background-image:
+    radial-gradient(
+      ellipse at top left,
+      rgba(216, 201, 176, 0.35),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at bottom right,
+      rgba(216, 201, 176, 0.28),
+      transparent 60%
+    ),
+    url("/textures/noise.svg");
+  background-size: auto, auto, 256px 256px;
+  background-repeat: no-repeat, no-repeat, repeat;
+}
+
+.bg-parchment-card {
+  background-color: var(--color-parchment);
+  background-image:
+    radial-gradient(
+      ellipse at top right,
+      rgba(216, 201, 176, 0.5),
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse at bottom left,
+      rgba(211, 166, 37, 0.08),
+      transparent 55%
+    ),
+    url("/textures/noise.svg");
+  background-size: auto, auto, 256px 256px;
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-blend-mode: multiply, normal, multiply;
+}
+
+.bg-burgundy-texture {
+  background-color: var(--color-burgundy-800);
+  background-image:
+    radial-gradient(
+      ellipse at top,
+      rgba(211, 166, 37, 0.12),
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse at bottom,
+      rgba(74, 0, 1, 0.8),
+      transparent 70%
+    ),
+    url("/textures/noise.svg");
+  background-size: auto, auto, 256px 256px;
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-blend-mode: screen, multiply, overlay;
+}
+
+/* ==========================================================================
+ * Animations
+ * ========================================================================== */
+@keyframes gold-sweep {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+.animate-gold-sweep {
+  animation: gold-sweep 0.8s cubic-bezier(0.2, 0.8, 0.3, 1) both;
+  transform-origin: center;
+}
+
+.animate-accordion-down {
+  animation: accordion-down 0.28s cubic-bezier(0.2, 0.8, 0.3, 1);
+}
+
+.animate-accordion-up {
+  animation: accordion-up 0.24s cubic-bezier(0.2, 0.8, 0.3, 1);
+}
+
+/* ==========================================================================
+ * Reduced Motion
+ * ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ==========================================================================
+ * Skip Link
+ * ========================================================================== */
+.skip-link {
+  position: absolute;
+  left: -10000px;
+  top: 0.75rem;
+  z-index: 100;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--color-burgundy-800);
+  color: #fff;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-elevated);
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  left: 1rem;
+}
+
+/* ==========================================================================
+ * Fantasy Utilities
+ * ========================================================================== */
+.text-gold-gradient {
+  background: linear-gradient(
+    180deg,
+    var(--color-gold-300) 0%,
+    var(--color-gold-500) 55%,
+    var(--color-gold-700) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.border-gold-frame {
+  border: 1px solid var(--color-gold-500);
+  box-shadow:
+    0 0 0 1px rgba(211, 166, 37, 0.25),
+    inset 0 0 0 4px var(--color-parchment);
+}
+
+.tabular-display {
+  font-variant-numeric: tabular-nums;
+}
